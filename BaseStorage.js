@@ -20,8 +20,7 @@ constructor(maxSize = 10){
   
 }
 isEmpty(){
-const fl=(this.storage.length===0)
-return fl
+return (this.storage.length===0)
 }
 toArray(){
 return [...this.storage]
@@ -49,9 +48,7 @@ try {
 //  The maximum number of elements of such a stack must be equal to the length of this entity. If the entity is not iterable, generate an error.
 
 class Stack extends BaseStorage{
-    constructor(maxSize=10){
-       super(maxSize)
-    }
+   
     push(elem){
     if(this.maxSize <= this.storage.length)
         throw new Error("Stack is full") 
@@ -97,10 +94,19 @@ class Stack extends BaseStorage{
         return newstack;
     }
 }
-const st=new Stack(3)
+const st=new Stack()
 st.push(4)
 st.push(3)
 st.push(2)
+st.push(2)
+st.push(2)
+st.push(2)
+st.push(2)
+st.push(2)
+st.push(2)
+st.push(2)
+
+
 console.log(st.toArray())
 console.log(st.pop())
 console.log(st.toArray())
@@ -118,9 +124,7 @@ console.log(st.peek())
 // - fromIterable(iterable) - returns a new Queue, the elements of which are the elements of the passed iterable entity.
 //  The maximum number of elements of such a queue must be equal to the length of this entity. If the entity is not iterable, generate an error.
 class  Queue extends BaseStorage{
-constructor(maxSize=10){
-    super(maxSize)
- }
+
 push(elem)
 {
     if(this.maxSize <= this.storage.length)
